@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="form-box">
+        <div class="form-value">
+          <form>
+            <h2>Login</h2>
+            <div class="inputbox">
+              <input type="email" required />
+              <label>Email</label>
+            </div>
+            <div class="inputbox">
+              <input type="password" required />
+              <label>Password</label>
+            </div>
+            <div class="forget">
+              <label
+                ><input type="checkbox" />Remember Me
+                <a href="#">Forget Password</a></label
+              >
+            </div>
+            <button>Log in</button>
+            <div class="register">
+              <p>Don't have a account <a href="#">Register</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <button class="button" id="open-modal">open modal</button>
+    </div>
+
+    <div class="modal" id="sign-in-success-modal">
+      <div class="modal-content">
+        <button class="close">X</button>
+
+        <p class="modal-message"></p>
+      </div>
+    </div>
+    <div class="container">
+      <button class="button" id="open-modal">open modal</button>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
