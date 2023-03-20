@@ -11,31 +11,55 @@
     <section>
       <div class="form-box">
         <div class="form-value">
-          <form>
+          <form action="/user" method="">
             <h2>Login</h2>
             <div class="inputbox">
-              <input type="email" required id="email" />
-              <label>Email</label>
+              <input type="email" id="email" name="email" required />
+              <label for="email">Email</label>
+              <span class="error-message"></span>
             </div>
             <div class="inputbox">
-              <input type="number" required id="id-number" />
-              <label for="Id-number">Id-number</label>
+              <input
+                type="number"
+                id="number"
+                name="number"
+                minlength="11"
+                required
+              />
+              <label for="number">Id-number</label>
+            </div>
+               <span id="nummessage"></span>
+            <div class="inputbox">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                minlength="6"
+                required
+              />
+              <label for="password"></label>
+              <span class="error-message"></span>
             </div>
             <div class="inputbox">
-              <input type="password" required id="password" />
-              <label for="Password">Password</label>
-            </div>
-            <div class="inputbox">
-              <input type="password" required id="repeat-Password" />
-              <label for="confirm-Password">repeat-Password</label>
-            </div>
+              <input
+                type="password"
+                id="confirm-password"
+                name="password2"
+                placeholder="Confirm Password"
+                required
+              />
+              <label for="password2"></label>
+             
+            </div> 
+            <span id="message"></span>
             <div class="forget">
-              <label
-                ><input type="checkbox" />Remember Me
-                <a href="#">Forget Password</a></label
-              >
+              <label>
+                <input type="checkbox" />Remember Me
+                <a href="#">Forget Password</a>
+              </label>
             </div>
-            <button>Log in</button>
+            <input type="button"  value="SUBMUT"  onclick="checkPassword(), checkEmail(), checkNumber()"  class="button login"></input>
             <div class="register">
               <p>Don't have a account <a href="#">Register</a></p>
             </div>
